@@ -1,40 +1,13 @@
-import { useEffect, useState } from "react"
-
-const Card = ({title}) => {
-  const [count, setCount] = useState(0);
-  const [hasLicked, setHasLicked] = useState(false);
-
-  useEffect( () => {
-    console.log(`${title} has been licked: ${hasLicked}`)
-  }, [hasLicked] ); //deps - revisa si la variable ha cambiado, y solo si cambia el efecto será llamado
-
-  //Caso mas comun de uso
-  // useEffect(() => {
-  //   console.log('Card Rendered')
-  // }, [])
-
-
-
-  return (
-    <div className="card" onClick={ () => setCount(count + 1) }>
-      <h2>{title} <br /> {count || null} </h2>
-
-      <button onClick={() => setHasLicked(!hasLicked)}>
-        {hasLicked ? '💓' : '🤍'}
-      </button>
-    </div>
-  )
-}
+import React from 'react'
 
 const App = () => {
-
-  return (
-    <div className="card-container">
-      <Card title='Star Wars' rating={5} isCool={true} />
-      <Card title='Avatar' />
-      <Card title='the Lion King' />
-    </div>
-  )
+    return (
+        <div>
+            <h1 class="text-3xl font-bold underline">
+                Hello world!
+            </h1>
+        </div>
+    )
 }
- 
+
 export default App
