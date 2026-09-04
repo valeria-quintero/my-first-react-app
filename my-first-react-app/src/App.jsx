@@ -1,15 +1,23 @@
 const Card = ({title}) => {
   return (
-    <h2>{title}</h2>
+    <div className="card" style={{
+      border: '1px solid #4b5362',
+      padding: '20px',
+      margin: '10px',
+      backgroundColor: '#31363f',
+      borderRadius: '10px',
+      minHeight: '100px',
+    }}>
+      <h2>{title}</h2>
+    </div>
   )
 }
 
 const App = () => {
   return (
-    <div>
-      <h2>Functional Arrow Component</h2>
+    <div className="card-container">
 
-      <Card title='Star Wars' rating={5} isCool={true} actors={[{name: 'Actors'}]} />
+      <Card title='Star Wars' rating={5} isCool={true} />
       <Card title='Avatar' />
       <Card title='the lion king' />
     </div>
